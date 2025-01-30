@@ -11,7 +11,9 @@ public class Brett {
     }
     
     public Rute finnRute(int plass, int sum) {
-        int nyPlass = Math.min(plass + sum, 100);
-        return brett[nyPlass];
+    	if(sum + plass > 100) {
+    		return brett[plass];
+    	}
+        return brett[sum+plass];
     }
 }
