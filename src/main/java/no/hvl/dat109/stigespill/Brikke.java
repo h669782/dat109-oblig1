@@ -6,7 +6,7 @@ public class Brikke {
 	public Rute plass;
 	
 	public Brikke() {
-		
+		plass = Brett.brett[0];
 	}
 	
 	public Brikke(String navn, Rute plass) {

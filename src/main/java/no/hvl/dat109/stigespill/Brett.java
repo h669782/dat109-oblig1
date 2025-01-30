@@ -1,13 +1,13 @@
 package no.hvl.dat109.stigespill;
 
 public class Brett {
-	private Rute[] brett = new Rute[100];
+	private static Rute[] brett = new Rute[100];
 	
 	public Brett() {
 		
 	}
 	
-	public Rute finnRute(int plass, int sum) {
+	public static Rute finnRute(int plass, int sum) {
 		if((plass + sum) <= 100) {
 			plass += sum;
 		}

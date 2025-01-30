@@ -5,8 +5,8 @@ public class Spiller {
 	public String navn;
 	public Brikke brikke;
 	
-	public Spiller() {
-		
+	public Spiller(String navn) {
+		this.navn = navn;
 	}
 	
 	public Spiller(String navn, Brikke brikke) {
@@ -37,7 +37,7 @@ public class Spiller {
 	public void spillTrekk() {
 		int sum = Terning.trill();
 		int plass = brikke.getPlass().getId();
-		int nyPlass = finnRute(plass, sum);
+		Rute nyPlass = Brett.finnRute(plass, sum);
 		brikke.setPlass(nyPlass);
 	}
 	
