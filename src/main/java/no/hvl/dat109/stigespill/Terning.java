@@ -6,7 +6,7 @@ public class Terning {
 	public Terning() {
 	}
 	
-	public int getVerdi() {
+	public static int getVerdi() {
 		return verdi;
 	}
 	

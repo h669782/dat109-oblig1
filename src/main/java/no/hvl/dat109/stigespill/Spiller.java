@@ -7,11 +7,7 @@ public class Spiller {
 	
 	public Spiller(String navn) {
 		this.navn = navn;
-	}
-	
-	public Spiller(String navn, Brikke brikke) {
-		this.navn = navn;
-		this.brikke = brikke;
+		this.brikke = new Brikke();
 	}
 	
 	public String getNavn() {
@@ -37,7 +33,7 @@ public class Spiller {
 	public void spillTrekk() {
 		int sum = Terning.trill();
 		int plass = brikke.getPlass().getId();
-		Rute nyPlass = Brett.finnRute(plass, sum);
+		Rute nyPlass = brett.finnRute(plass, sum);
 		brikke.setPlass(nyPlass);
 	}
 	

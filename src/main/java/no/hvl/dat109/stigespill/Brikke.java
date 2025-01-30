@@ -6,12 +6,11 @@ public class Brikke {
 	public Rute plass;
 	
 	public Brikke() {
-		plass = Brett.brett[0];
 	}
 	
 	public Brikke(String navn, Rute plass) {
 		this.navn = navn;
-		this.plass = plass;
+		this.plass = brett.finnRute(1);
 	}
 	
 	public String getNavn() {
