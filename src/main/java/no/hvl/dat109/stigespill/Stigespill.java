@@ -24,11 +24,20 @@ public class Stigespill {
         boolean ferdig = false;
         while (!ferdig) {
             for (Spiller spiller : spillere) {
-                int terningkast = terning.trill();
-                spiller.spillTrekk(terningkast);
+                int terningkast = terning.trill(spiller);
                 
-                System.out.println(spiller.getNavn() + " kastet " + terningkast + " og flyttet til rute " + spiller.getBrikke().getPlass().getId());
-                
+                if(terningkast == 0) {
+                	System.out.println(spiller.getNavn() + " kastet 6 tre ganger på rad og må flytte tilbake til start");
+                	spiller.getBrikke().setPlass(brett.getRute(1));
+                }
+                else if ( spiller.getBrikke().getPlass().getId() + terningkast > 100){
+                	System.out.println(spiller.getNavn() + " kastet " + terningkast + " og blir stående på rute " + spiller.getBrikke().getPlass().getId());
+                }
+                else {
+                    spiller.spillTrekk(terningkast);
+                    System.out.println(spiller.getNavn() + " kastet " + terningkast % 6 + " og flyttet til rute " + spiller.getBrikke().getPlass().getId());
+                }
+
                 if (spiller.harVunnet()) {
                     System.out.println(spiller.getNavn() + " har vunnet!");
                     ferdig = true;
@@ -36,7 +45,7 @@ public class Stigespill {
                 }
                 
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

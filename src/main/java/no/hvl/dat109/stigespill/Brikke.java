@@ -26,4 +26,8 @@ public class Brikke {
     public void setPlass(Rute plass) {
         this.plass = plass;
     }
+    
+    public Brett getBrett() {
+    	return brett;
+    }
 }

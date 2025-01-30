@@ -16,4 +16,9 @@ public class Brett {
     	}
         return brett[sum+plass];
     }
+    
+    public Rute getRute(int id) {
+        return brett[id];
+    }
+    
 }

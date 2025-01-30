@@ -10,10 +10,11 @@ public class Terning {
 		return verdi;
 	}
 	
-	public static int trill() {
+	public int trill(Spiller spiller) {
 		verdi = (int)((Math.random()*6)+1);
 		
 		while(verdi % 6 == 0 && verdi <= 18) {
+			System.out.println(spiller.getNavn() + " kastet 6 og får ett nytt kast");
 			verdi += (int)((Math.random()*6)+1);
 		}
 		
