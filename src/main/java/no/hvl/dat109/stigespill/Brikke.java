@@ -3,15 +3,15 @@ package no.hvl.dat109.stigespill;
 public class Brikke {
 	
 	public String navn;
-	public Rute rute;
+	public Rute plass;
 	
 	public Brikke() {
 		
 	}
 	
-	public Brikke(String navn, Rute rute) {
+	public Brikke(String navn, Rute plass) {
 		this.navn = navn;
-		this.rute = rute;
+		this.plass = plass;
 	}
 	
 	public String getNavn() {
@@ -22,12 +22,12 @@ public class Brikke {
 		this.navn = navn;
 	}
 	
-	public Rute getRute() {
-		return rute;
+	public Rute getPlass() {
+		return plass;
 	}
 	
-	public void setRute(Rute rute) {
-		this.rute = rute;
+	public void setPlass(Rute plass) {
+		this.plass = plass;
 	}
 
 }

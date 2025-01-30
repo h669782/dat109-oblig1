@@ -1,7 +1,5 @@
 package no.hvl.dat109.stigespill;
 
-import java.util.Random;
-
 public class Terning {
 	private static int verdi;
 	

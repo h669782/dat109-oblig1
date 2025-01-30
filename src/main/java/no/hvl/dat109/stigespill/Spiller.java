@@ -31,11 +31,14 @@ public class Spiller {
 	}
 	
 	public boolean harVunnet() {
-		return false;
+		return brikke.getPlass().getId() == 100;
 	}
 	
 	public void spillTrekk() {
-		
+		int sum = Terning.trill();
+		int plass = brikke.getPlass().getId();
+		int nyPlass = finnRute(plass, sum);
+		brikke.setPlass(nyPlass);
 	}
 	
 }
