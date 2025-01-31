@@ -12,7 +12,6 @@ class BrikkeTest {
     void testInitialPosition() {
         Brett brett = new Brett();
         Brikke brikke = new Brikke(brett);
-        // Brikken skal starte på rute 1.
         assertEquals(1, brikke.getPlass().getId(), "Brikken skal starte på rute 1");
     }
     

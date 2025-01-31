@@ -31,7 +31,6 @@ class TerningTest {
         Spiller spiller = new Spiller("Dummy", brett);
         Terning terning = new Terning();
         int result = terning.trill(spiller);
-        // Sjekker at resultatet faller innenfor gyldig intervall.
         if (result != 0) {
             assertTrue(result > 0 && result < 18, "Resultat skal være mellom 1 og 17 når det ikke er 0");
         }

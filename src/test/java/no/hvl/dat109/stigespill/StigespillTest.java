@@ -12,8 +12,7 @@ class StigespillTest {
 
     @Test
     void testConstructor() {
-        // Oppretter et spill med to spillere.
-        Stigespill spill = new Stigespill(Arrays.asList("Alice", "Bob"));
+        Stigespill spill = new Stigespill(Arrays.asList("Anthony", "Jonas"));
         assertNotNull(spill, "Stigespill-instansen skal ikke være null");
     }
 }
